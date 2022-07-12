@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 // Take in props data to construct the component
 const CampusView = (props) => {
   const {campus} = props;
-  
+
+  // Count total number of students 
+  let count = Object.keys(campus.students).length;
+
   // Render a single Campus view with list of its students
   return (
     <div>
@@ -17,6 +20,9 @@ const CampusView = (props) => {
       <h1>{campus.name}</h1>
       <p>{campus.address}</p>
       <p>{campus.description}</p>
+
+      <h2>Total Students: {count}</h2>
+
       {campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;
         return (
