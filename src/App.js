@@ -1,5 +1,5 @@
 import "./App.css";
-
+console.log(`Filename is ${__filename}`);
 //Router
 import { Switch, Route } from "react-router-dom";
 //Components
@@ -9,7 +9,9 @@ import {
   StudentContainer,
   AllCampusesContainer,
   AllStudentsContainer,
-  NewStudentContainer
+  NewStudentContainer,
+  NewCampusContainer,
+  EditCampusContainer,
 } from './components/containers';
 
 // if you create separate components for adding/editing 
@@ -22,6 +24,14 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePageContainer} />
         <Route exact path="/campuses" component={AllCampusesContainer} />
+        <Route exact path="/newcampus" component={NewCampusContainer} />
+
+
+        <Route exact path="/editcampus/:id" component={EditCampusContainer} />
+
+
+
+
         <Route exact path="/campus/:id" component={CampusContainer} />
         <Route exact path="/students" component={AllStudentsContainer} />
         <Route exact path="/newstudent" component={NewStudentContainer} />
@@ -32,3 +42,9 @@ const App = () => {
 }
 
 export default App;
+
+
+/*
+<Route exact path="/campus/:id/edit" component={EditCampusContainer} />
+<Route exact path="/newcampus" component={EditCampusContainer} />
+*/
