@@ -21,11 +21,11 @@ const StudentView = (props) => {
       <p> <b>Attends: </b> {student.campus.name}</p>
 
       <Link to={`/editstudent/${student.id}`}>
-        <Button variant="contained" color="primary">Edit Student Information</Button>
+        <Button variant="contained" style={{marginRight: '50px'}} color="primary">Edit Student Information</Button>
       </Link>
 
       <Link to="/students">
-        <Button margin-right = "50px" variant="contained" color="primary" onClick={() => deleteStudent(student.id)}>Delete Student</Button>
+        <Button margin-right = "50px" variant="contained" style={{marginRight: '50px'}} color="primary" onClick={() => deleteStudent(student.id)}>Delete Student</Button>
       </Link>
 
     </div>
