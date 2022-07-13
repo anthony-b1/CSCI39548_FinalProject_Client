@@ -62,7 +62,7 @@ const NewStudentView = (props) => {
             <br/>
 
             <label style={{color:'#11153e', fontWeight: 'bold'}}>Image URL: </label>
-            <input type="text" name="imageUrl" onChange={(e) => handleChange(e)} />
+            <input type="text" name="imageUrl" placeholder = "Optional" onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
@@ -77,7 +77,7 @@ const NewStudentView = (props) => {
             <br/>
 
             <label style={{color:'#11153e', fontWeight: 'bold'}}>Campus Id: </label>
-            <input type="text" name="campusId" onChange={(e) => handleChange(e)} />
+            <input type="number" min="1" step="1" name="campusId" onChange={(e) => handleChange(e)} required/>
             <br/>
             <br/>
 
