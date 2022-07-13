@@ -64,7 +64,6 @@ export const deleteStudent = (studentId) => {
   };
 };
 
-
 export const editStudent = (student) => {
   return {
     type: at.EDIT_STUDENT,

@@ -24,8 +24,8 @@ const AllCampusesView = (props) => {
             <h2>{campus.name}</h2>
           </Link>
           <h4>campus id: {campus.id}</h4>
-          <p>{campus.address}</p>
-          <p>{campus.description}</p>
+          <p> <b>Address: </b> {campus.address}</p>
+          <p> <b>Description: </b> {campus.description}</p>
           <hr/>
         </div>
       ))}

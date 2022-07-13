@@ -41,6 +41,7 @@ const CampusView = (props) => {
           </div>
         );
       })}
+
     </div>
   );
 };
