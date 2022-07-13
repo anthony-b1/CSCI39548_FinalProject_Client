@@ -19,8 +19,8 @@ const CampusView = (props) => {
     <div>
       <img src={campus.imageUrl} alt={campus.name}/>
       <h1>{campus.name}</h1>
-      <p>{campus.address}</p>
-      <p>{campus.description}</p>
+      <p> <b>Address: </b> {campus.address}</p>
+      <p> <b>Description: </b> {campus.description}</p>
 
       <Link to={`/editcampus/${campus.id}`}>
         <Button variant="contained" color="primary">Edit Campus Information</Button>
@@ -29,6 +29,7 @@ const CampusView = (props) => {
       <Link to="/campuses">
         <Button margin-right = "50px" variant="contained" color="primary" onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
       </Link>
+
       <h2>Total Students: {count}</h2>
       {campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;

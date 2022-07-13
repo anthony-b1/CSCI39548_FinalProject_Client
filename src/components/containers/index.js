@@ -15,4 +15,3 @@ export { default as StudentContainer } from "./StudentContainer";
 export { default as NewStudentContainer } from "./NewStudentContainer";
 export { default as NewCampusContainer } from "./NewCampusContainer";
 export { default as EditCampusContainer } from "./EditCampusContainer";
-
