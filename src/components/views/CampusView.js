@@ -21,8 +21,13 @@ const CampusView = (props) => {
       <h1>{campus.name}</h1>
       <p>{campus.address}</p>
       <p>{campus.description}</p>
+
+      <Link to={`/editcampus/${campus.id}`}>
+        <Button variant="contained" color="primary">Edit Campus Information</Button>
+      </Link>
+
       <Link to="/campuses">
-        <Button variant="contained" color="primary" onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
+        <Button margin-right = "50px" variant="contained" color="primary" onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
       </Link>
       <h2>Total Students: {count}</h2>
       {campus.students.map( student => {
