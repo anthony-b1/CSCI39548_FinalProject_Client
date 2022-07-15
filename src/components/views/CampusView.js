@@ -19,16 +19,17 @@ const CampusView = (props) => {
     <div>
       <img src={campus.imageUrl} alt={campus.name}/>
       <h1>{campus.name}</h1>
-      <p>{campus.address}</p>
-      <p>{campus.description}</p>
+      <p> <b>Address: </b> {campus.address}</p>
+      <p> <b>Description: </b> {campus.description}</p>
 
       <Link to={`/editcampus/${campus.id}`}>
-        <Button variant="contained" color="primary">Edit Campus Information</Button>
+        <Button variant="contained" style={{marginRight: '50px'}} color="primary">Edit Campus Information</Button>
       </Link>
 
       <Link to="/campuses">
-        <Button margin-right = "50px" variant="contained" color="primary" onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
+        <Button margin-right = "50px" variant="contained" color="primary" style={{marginRight: '50px'}} onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
       </Link>
+
       <h2>Total Students: {count}</h2>
       {campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;
@@ -40,6 +41,11 @@ const CampusView = (props) => {
           </div>
         );
       })}
+
+      <Link to={`/enrollstudent/${campus.id}`}>
+        <Button variant="contained" color="primary">Enroll Student</Button>
+      </Link>
+
     </div>
   );
 };
