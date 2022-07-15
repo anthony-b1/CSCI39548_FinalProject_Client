@@ -28,6 +28,7 @@ const CampusView = (props) => {
 
       <Link to="/campuses">
         <Button margin-right = "50px" variant="contained" color="primary" style={{marginRight: '50px'}} onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
+        <Button variant="contained" color="primary" style={{marginRight: '50px'}} onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
       </Link>
 
       <h2>Total Students: {count}</h2>
@@ -45,7 +46,7 @@ const CampusView = (props) => {
       <Link to={`/enrollstudent/${campus.id}`}>
         <Button variant="contained" color="primary">Enroll Student</Button>
       </Link>
-
+      
     </div>
   );
 };
