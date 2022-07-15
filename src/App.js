@@ -1,5 +1,4 @@
 import "./App.css";
-console.log(`Filename is ${__filename}`);
 //Router
 import { Switch, Route } from "react-router-dom";
 //Components
@@ -38,9 +37,3 @@ const App = () => {
 }
 
 export default App;
-
-
-/*
-<Route exact path="/campus/:id/edit" component={EditCampusContainer} />
-<Route exact path="/newcampus" component={EditCampusContainer} />
-*/
