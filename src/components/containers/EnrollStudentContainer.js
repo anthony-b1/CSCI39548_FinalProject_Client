@@ -52,7 +52,7 @@ class EnrollStudentContainer extends Component {
     console.log("campusId: " + student.campusId);
 
     // Add enroll student in back-end database
-    let enrollStudent = await this.props.addStudent(student);
+    await this.props.addStudent(student);
 
     // Update state, and trigger redirect to show the enroll student
     this.setState({
