@@ -125,6 +125,19 @@ export const editStudentThunk = student => async dispatch => {  // The THUNK
   }
 };
 
+// Unenroll Student
+// THUNK CREATOR:
+export const unenrollStudentThunk = studentId => async dispatch => {  // The THUNK
+  try {
+    // API "unenroll" call to unenroll student (based on "studentID") from database
+    await axios.patch(`/api/students/${studentId}`,{campusId: null});  
+    // unenroll successful so change state with dispatch
+    dispatch(ac.unenrollStudent(studentId));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
 // Single Student
 // THUNK CREATOR:
 export const fetchStudentThunk = id => async dispatch => {  // The THUNK
