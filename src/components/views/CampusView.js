@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 
 // Take in props data to construct the component
 const CampusView = (props) => {
-  const {campus, deleteCampus} = props;
+  const {campus, deleteCampus, unenrollStudent} = props;
 
   // Count total number of students 
   let count = Object.keys(campus.students).length;
@@ -36,7 +36,12 @@ const CampusView = (props) => {
         return (
           <div key={student.id}>
             <Link to={`/student/${student.id}`}>
-              <h2>{name}</h2>
+              <h2>
+                {name}
+                <button style={{marginLeft: '50px'}} onClick={() => unenrollStudent(student.id)}>
+                  Unenroll
+                </button>
+              </h2>
             </Link>
           </div>
         );

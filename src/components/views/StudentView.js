@@ -10,6 +10,26 @@ import Button from '@material-ui/core/Button';
 const StudentView = (props) => {
   const { student, deleteStudent } = props;
 
+  // If Student doesn't have a campus do this instead
+  if (!student.campusId) {
+    return (
+    <div>
+      <img src={student.imageUrl} alt={student.name}/>
+      <p> <b>First Name: </b> {student.firstname}</p>
+      <p> <b>Last Name: </b> {student.lastname}</p>
+      <p> <b>Email: </b> {student.email}</p>
+      <p> <b>GPA: </b> {student.gpa}</p>
+      <p> <b>No Campus Attended </b> </p>
+      <Link to={`/editstudent/${student.id}`}>
+        <Button variant="contained" style={{marginRight: '50px'}} color="primary">Edit Student Information</Button>
+      </Link>
+      <Link to="/students">
+        <Button margin-right = "50px" variant="contained" style={{marginRight: '50px'}} color="primary" onClick={() => deleteStudent(student.id)}>Delete Student</Button>
+      </Link>
+    </div>
+    );
+  }
+
   // Render a single Student view 
   return (
     <div>
