@@ -71,6 +71,13 @@ export const editStudent = (student) => {
   };
 };
 
+export const unenrollStudent = (studentId) => {
+  return {
+    type: at.UNENROLL_STUDENT,
+    payload: studentId,
+  };
+};
+
 //Single Student
 export const fetchStudent = (student) => {
   return {

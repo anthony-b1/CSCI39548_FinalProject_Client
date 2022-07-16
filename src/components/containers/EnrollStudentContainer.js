@@ -49,7 +49,6 @@ class EnrollStudentContainer extends Component {
         gpa: this.state.gpa,
         campusId: id
     };
-    console.log("campusId: " + student.campusId);
 
     // Add enroll student in back-end database
     await this.props.addStudent(student);

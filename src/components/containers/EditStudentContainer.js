@@ -44,8 +44,6 @@ class EditStudentContainer extends Component {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
     const path = window.location.pathname;
     const id = path.slice(13, path.length); // Capture student id of the current page by getting it from the URL path
-    console.log("id" + id);
-    console.log("path: " + path);
     let student = {
         firstname: this.state.firstname,
         lastname: this.state.lastname, 
